@@ -5,6 +5,9 @@
 #include <QLineEdit>
 #include <QFormLayout>
 #include <QLabel>
+#include <QPushButton>
+
+#include "Dice/d6/d6.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,5 +25,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    QFormLayout* m_form = nullptr;
+    QLineEdit* m_inputLE = nullptr;
+    QLabel* m_resultLabel = nullptr;
+    QPushButton* m_rollBtn = nullptr;
+    QWidget* m_gambleWidget = nullptr;
+
+private slots:
+    void roll();
 };
 #endif // MAINWINDOW_H
