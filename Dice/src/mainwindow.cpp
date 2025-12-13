@@ -31,11 +31,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::roll()
 {
-    std::vector<Dice> diceVec;
 
-    Dice* dice = new d6(this);
-
-    m_resultLabel->setText(QString::number(dice->rollTheDice()));
-
-    dice->deleteLater();
 }

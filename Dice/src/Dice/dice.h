@@ -14,7 +14,7 @@ class Dice : public QObject
 {
     Q_OBJECT
 public:
-    explicit Dice(QObject *parent = nullptr);
+    explicit Dice(unsigned int numFaces, unsigned int maxFace, unsigned int faceDiff, QObject *parent = nullptr);
 
     unsigned int rollTheDice();
 
@@ -27,6 +27,7 @@ protected:
 
     bool checkResult(unsigned int result);
 
+    void fillFaces(unsigned int maxFace, unsigned int faceDiff);
 signals:
 };
 

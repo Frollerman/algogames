@@ -7,7 +7,7 @@
 #include <QLabel>
 #include <QPushButton>
 
-#include "Dice/d6/d6.h"
+#include "Dice/dice.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -31,6 +31,8 @@ private:
     QLabel* m_resultLabel = nullptr;
     QPushButton* m_rollBtn = nullptr;
     QWidget* m_gambleWidget = nullptr;
+
+    std::vector<Dice> m_diceVec;
 
 private slots:
     void roll();
